@@ -1,6 +1,6 @@
 ---
 - name: Check service status
-  hosts: your_target_hosts
+  hosts: all
   tasks:
     - name: Check if the service is running
       service_facts:
