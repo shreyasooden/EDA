@@ -8,5 +8,5 @@
 
     - name: Display service status
       debug:
-        msg: "Service {{ service_facts.services['your_service_name'].state }}"
+        msg: "Service {{ service_facts.services['sshd'].state }}"
       # Replace 'your_service_name' with the name of the service you want to check
