@@ -1,0 +1,12 @@
+---
+- name: Check service status
+  hosts: your_target_hosts
+  tasks:
+    - name: Check if the service is running
+      service_facts:
+      # This gathers facts about services on the target hosts
+
+    - name: Display service status
+      debug:
+        msg: "Service {{ service_facts.services['your_service_name'].state }}"
+      # Replace 'your_service_name' with the name of the service you want to check
