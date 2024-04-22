@@ -5,6 +5,7 @@
     - name: Check if the service is running
       service_facts:
       # This gathers facts about services on the target hosts
+      register: service_facts
 
     - name: Display service status
       debug:
