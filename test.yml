@@ -7,5 +7,5 @@
       name: "sshd"
     register: pg_service_status
 
-- debug:
-    var: pg_service_status.status.ActiveState
+  - debug:
+      var: pg_service_status.status.ActiveState
