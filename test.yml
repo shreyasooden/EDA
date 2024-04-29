@@ -2,12 +2,10 @@
 - name: Check service status
   hosts: all
   tasks:
-    - name: Check if the service is running
-      service_facts:
-      # This gathers facts about services on the target hosts
-      register: service_facts
+  - name: Get Service Status
+    ansible.builtin.systemd:
+      name: "sshd"
+    register: pg_service_status
 
-    - name: Display service status
-      debug:
-        msg: "Service {{ service_facts.services['sshd'].state }}"
-      # Replace 'your_service_name' with the name of the service you want to check
+- debug:
+    var: pg_service_status.status.ActiveState
