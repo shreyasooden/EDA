@@ -5,7 +5,7 @@
   sources:
      - ansible.eda.url_check:
         urls:
-          - http://192.168.150.143:8080
+          - http://10.76.107.105:80
         delay: 10
 
   rules:
