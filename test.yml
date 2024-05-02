@@ -1,11 +1,6 @@
 ---
-- name: Check service status
+- name: test centralised role
   hosts: all
-  tasks:
-  - name: Get Service Status
-    ansible.builtin.systemd:
-      name: "sshd"
-    register: pg_service_status
-
-  - debug:
-      var: pg_service_status.status.ActiveState
+  roles:
+    - centralised_role
+  
