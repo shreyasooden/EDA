@@ -1,6 +1,6 @@
 ---
 - name: Listen for events on a webhook
-  hosts: web
+  hosts: all
   ## Define our source for events
   sources:
      - ansible.eda.url_check:
