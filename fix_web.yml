@@ -16,3 +16,4 @@
        owner: apache
        group: apache
        mode: '0644'
+      delegate_to: localhost
