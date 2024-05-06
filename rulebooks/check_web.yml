@@ -17,7 +17,7 @@
         run_job_template:
           name: web_working
           organization: "Default"
-#          copy_files: true
+
 
     - name: Web site is down
       condition: event.url_check.status == "down"
@@ -26,4 +26,4 @@
         run_job_template:
           name: fix_web
           organization: "Default"
-          #copy_files: true
+
