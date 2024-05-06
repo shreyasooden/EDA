@@ -16,6 +16,7 @@
       action:
         run_job_template:
           name: web_working
+          organization: "Default"
 #          copy_files: true
 
     - name: Web site is down
