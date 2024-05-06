@@ -19,7 +19,7 @@
           organization: "Default"
 
 
-    - name: Web site is down
+    - name: Web site is DOWN
       condition: event.url_check.status == "down"
     ## Define the action we should take should the condition be met  
       action:
