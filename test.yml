@@ -2,5 +2,5 @@
 - name: test centralised role
   hosts: all
   roles:
-    - centralized_role
+    - hnw
   
