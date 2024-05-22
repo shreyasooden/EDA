@@ -3,7 +3,10 @@
   hosts: localhost
   tasks:
     - name: Login to OpenShift
-      openshift_login:
-        username: admin
-        password: admin
-        server_url: https://console-openshift-console.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io/
+      uri:
+        url: oc login -u admin -p admin https://apicrc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io:6443
+      register: out
+#      openshift_login:
+#        username: admin
+#        password: admin
+#        server_url: https://console-openshift-console.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io/
