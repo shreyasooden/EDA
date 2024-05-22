@@ -5,7 +5,7 @@
   tasks:
     - name: Get OpenShift Authentication Token
       uri:
-        url: "https://console-openshift-console.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io/"
+        url: "https://api.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io:6443/oauth/token/request"
         method: POST
         body_format: form-urlencoded
         body:
