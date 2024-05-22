@@ -6,7 +6,7 @@
       openshift_login:
         username: admin
         password: admin
-        server: http://api.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io:6443
+        server: https://api.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io:6443
 #        certificate_authority: /path/to/openshift-cluster-ca.crt
       register: openshift_login
 
