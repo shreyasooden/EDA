@@ -1,9 +1,6 @@
 ---
 - name: test centralised role
   hosts: all
-    vars:
-    namespace: test-ns
-    kubeconfig_path: kubeconfig 
   tasks:
     - name: Login to Cluster
       openshift_login:
