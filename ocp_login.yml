@@ -1,0 +1,9 @@
+---
+- name: Deploy Application to OCP
+  hosts: localhost
+  tasks:
+    - name: Login to OpenShift
+      openshift_login:
+        username: admin
+        password: admin
+        server_url: https://console-openshift-console.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io/
