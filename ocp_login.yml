@@ -2,10 +2,30 @@
 - name: Deploy Application to OCP
   hosts: localhost
   tasks:
-    - name: Login to OpenShift
+  tasks:
+    - name: Get OpenShift Authentication Token
       uri:
-        url: oc login -u admin -p admin https://apicrc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io:6443
-      register: out
+        url: "https://console-openshift-console.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io/"
+        method: POST
+        body_format: form-urlencoded
+        body:
+          client_id: "openshift-challenging-client"
+          response_type: "token"
+          grant_type: "password"
+          username: "admin"
+          password: "admin"
+        return_content: yes
+        status_code: 200
+        validate_certs: no  # Set to yes if your OpenShift cluster uses valid SSL certificates
+      register: login_response
+
+    - name: Extract Authentication Token
+      set_fact:
+        token: "{{ login_response.json.access_token }}"
+
+    - name: Print Authentication Token
+      debug:
+        var: token
 #      openshift_login:
 #        username: admin
 #        password: admin
