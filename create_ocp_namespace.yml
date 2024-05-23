@@ -31,3 +31,19 @@
       debug:
         msg: "Namespace was created successfully"
       when: namespace_info.result.metadata.name == namespace
+
+    - name: Deny all traffic from outside by default
+      redhat.openshift.k8s:
+        kubeconfig: "{{ kubeconfig_path }}
+        state: present
+        definition:
+          apiVersion: v1
+          kind: NetworkPolicy
+          apiVersion: v1
+          metadata:
+            name: allow-from-same-namespace
+          spec:
+            podSelector:
+            ingress:
+            - from:
+              - podSelector: {}
