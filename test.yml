@@ -4,9 +4,9 @@
   tasks:
     - name: Login to Cluster
       openshift_login:
-        username: admin
-        password: admin
-        server: https://api.crc-lgph7-master-0.crc.pf39gmx93kqp.instruqt.io:6443
+        username: kubeadmin
+        password: SCkff-wqao2-fbP2U-ScxS2
+        server: https://api.apps.nareshp.lab.psi.pnq2.redhat.com:6443
 #        certificate_authority: /path/to/openshift-cluster-ca.crt
       register: openshift_login
 
