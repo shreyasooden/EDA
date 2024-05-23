@@ -3,3 +3,6 @@ roles:
     scm: git
     name: centralized_role
     version: origin/main
+collections:
+  - name: redhat.openshift
+    version: 3.0.1
