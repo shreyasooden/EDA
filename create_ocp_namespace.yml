@@ -6,7 +6,7 @@
     kubeconfig_path: kubeconfig 
   tasks:
     - name: Create a namespace
-      redhat.openshift.k8s:
+      kubernetes.core.k8s:
         host: https://api.nareshp.lab.psi.pnq2.redhat.com:6443
         username: kubeadmin
         password: SCkff-wqao2-fbP2U-ScxS2
