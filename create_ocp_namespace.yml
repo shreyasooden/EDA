@@ -10,6 +10,7 @@
         host: https://api.nareshp.lab.psi.pnq2.redhat.com:6443
         username: kubeadmin
         password: SCkff-wqao2-fbP2U-ScxS2
+        verify_ssl: false
         state: present
         definition:
           apiVersion: v1
