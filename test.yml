@@ -7,6 +7,7 @@
         username: kubeadmin
         password: SCkff-wqao2-fbP2U-ScxS2
         server: https://api.apps.nareshp.lab.psi.pnq2.redhat.com:6443
+        validate_certs: no
 #        certificate_authority: /path/to/openshift-cluster-ca.crt
       register: openshift_login
 
