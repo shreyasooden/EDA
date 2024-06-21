@@ -4,7 +4,7 @@
   sources:
     - ansible.eda.file:
         paths:
-          - /path/to/your/file
+          - /tmp/testfile
         state: present
 
   rules:
