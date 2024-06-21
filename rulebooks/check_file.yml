@@ -1,0 +1,21 @@
+---
+- name: File existence and changes monitoring
+  hosts: localhost
+  sources:
+    - ansible.eda.file:
+        paths:
+          - /path/to/your/file
+        state: present
+
+  rules:
+    - name: File exists
+      condition: event.state == 'present'
+      actions:
+        - ansible.builtin.debug:
+            msg: "The file {{ event.path }} exists."
+
+    - name: File does not exist
+      condition: event.state == 'absent'
+      actions:
+        - ansible.builtin.debug:
+            msg: "The file {{ event.path }} does not exist."
