@@ -5,7 +5,6 @@
     - ansible.eda.file:
         paths:
           - /tmp/testfile
-        state: present
 
   rules:
     - name: File exists
