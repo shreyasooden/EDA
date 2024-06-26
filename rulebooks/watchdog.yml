@@ -11,15 +11,15 @@
     - name: run tests 1
       condition: event.type == "DirModifiedEvent"
       action:
-        run_playbook:
-          name: ansible.eda.run_pytest
-          post_events: true
+        run_job_template:
+          name: dir_modified
+          organization: "Default"
     - name: run tests 2
       condition: event.type == "FileModifiedEvent"
       action:
-        run_playbook:
-          name: ansible.eda.run_pytest
-          post_events: true
+        run_job_template:
+          name: file_modified
+          organization: "Default"
     - name: print output
       condition: event.output is defined
       action:
