@@ -1,0 +1,10 @@
+---
+- name: Directory Modified
+  hosts: all
+  gather_facts: false
+  become: true
+  
+  tasks:
+    - name: directory modified
+      debug:
+        msg: "Directory has been modified"
