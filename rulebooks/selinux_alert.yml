@@ -1,6 +1,6 @@
 ---
 - name: Capture alertmanager alerts
-  hosts: localhost
+  hosts: all
   sources:
     - ansible.eda.alertmanager:
         host: 0.0.0.0
