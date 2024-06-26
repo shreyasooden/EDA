@@ -3,7 +3,7 @@
   hosts: all
   sources:
     - name: watchdog
-      ansible.eda.watchdog:
+      file_watch:
         path: /demo
         recursive: true
         ignore_regexes: ['.*\.pytest.*', '.*__pycache__.*', '.*/.git.*']
