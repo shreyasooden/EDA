@@ -4,7 +4,7 @@
   sources:
     - ansible.eda.alertmanager:
         host: 10.76.107.105
-        port: 5050
+        port: 9090
         data_alerts_path: alerts
         data_host_path: labels.instance
         data_path_separator: .
