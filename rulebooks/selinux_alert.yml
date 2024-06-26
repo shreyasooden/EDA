@@ -3,7 +3,7 @@
   hosts: all
   sources:
     - ansible.eda.alertmanager:
-        host: 0.0.0.0
+        host: 10.76.107.105
         port: 9093
         data_alerts_path: alerts
         data_host_path: labels.instance
