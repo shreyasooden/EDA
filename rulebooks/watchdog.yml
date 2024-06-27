@@ -2,7 +2,7 @@
 - name: Local Test Runner Rules
   hosts: localhost
   sources:
-    - ansible.eda.watchdog:
+     - ansible.eda.watchdog:
         path: "/demo"
         recursive: true
         ignore_regexes: ['.*\.pytest.*', '.*__pycache__.*', '.*/.git.*']
