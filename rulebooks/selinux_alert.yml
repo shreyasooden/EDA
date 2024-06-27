@@ -11,6 +11,12 @@
         skip_original_data: true
 
   rules:
+    - name: Debug Hello event
+      condition: event.alert is defined
+      action:
+        run_job_template:
+          name: Apply_baseline
+          organization: Default
     - name: SELinux was disabled
       condition: event.alert.labels.alertname == "selinux is in disabled/permissive mode" and event.alert.status == "firing" or event.alert.status == "pending"
       action:
