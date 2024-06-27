@@ -1,6 +1,6 @@
 ---
 - name: Local Test Runner Rules
-  hosts: all
+  hosts: localhost
   sources:
     - name: watchdog
       ansible.eda.watchdog:
