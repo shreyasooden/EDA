@@ -6,10 +6,10 @@
   
   tasks:
     - name: url output
-      uri: 
-        url: http://10.76.107.105:80
-        return_content: true
-    - debug:
+#      uri: 
+#        url: http://10.76.107.105:80
+#        return_content: true
+      debug:
         msg: "Website is down!"
 
     - name: Replace website
