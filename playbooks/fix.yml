@@ -11,7 +11,10 @@
 #        return_content: true
       debug:
         msg: "Website is down!"
-
+    - name: Restart service
+      ansible.builtin.systemd_service:
+        state: restarted
+        name: httpd
     - name: Replace website
       copy:
         remote_src: yes
