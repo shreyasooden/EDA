@@ -23,8 +23,8 @@
         run_job_template:
           name: Apply_baseline
           organization: Default
-          job_args:
-            limit: "{{ event.meta.hosts }}"
+          #job_args:
+           # limit: "{{ event.meta.hosts }}"
 
     - name: SELinux was enabled
       condition: event.alert.labels.alertname == "selinux disabled" and event.alert.status == "resolved"
