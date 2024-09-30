@@ -19,7 +19,7 @@
 
 
     - name: Web site is DOWN
-      condition: event.url_check.content == "demo"
+      condition: event.url_check.content != "test"
     ## Define the action we should take should the condition be met  
       action:
         run_job_template:
