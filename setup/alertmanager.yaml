@@ -1,0 +1,20 @@
+global:
+  resolve_timeout: 1m
+
+route:
+  group_by: ['alertname']
+  group_wait: 5s
+  group_interval: 30s
+  repeat_interval: 10m
+  receiver: 'webhooks'
+receivers:
+- name: 'webhooks'
+  webhook_configs:
+  - url: 'http://10.76.107.103:5050/prometheus'
+#    - url: 'http://10.76.107.103:5000/alerts'
+#inhibit_rules:
+#  - source_match:
+#      severity: 'critical'
+#    target_match:
+#      severity: 'warning'
+#    equal: ['alertname', 'dev', 'instance']
