@@ -1,0 +1,11 @@
+groups:
+- name: selinux disabled
+  rules:
+  - alert: selinux disabled
+    expr: node_selinux_current_mode == 0
+    for: 10s
+    labels:
+      severity: page
+    annotations:
+      summary: "selinx disabled"
+# keep this file in /etc/prometheus
