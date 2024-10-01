@@ -1,0 +1,14 @@
+---
+- name: Respond to github webhook POST
+  hosts: all
+  sources:
+    - ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 5000
+      filters:
+        - ansible.eda.dashes_to_underscores:
+  rules:
+    - name: update netscaler repository
+      condition: event.payload is defined
+      action:
+        debug:
