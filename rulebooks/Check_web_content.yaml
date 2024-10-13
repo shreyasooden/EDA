@@ -13,6 +13,6 @@
       condition: event.payload is defined
     ## Define the action we should take should the condition be met  
       action:
-        debug:
+        debug: "{{ event }}"
         
 
