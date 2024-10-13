@@ -9,19 +9,10 @@
         delay: 10
 
   rules:
-    - name: Web site is up
-      condition: event.url_check.content == "test"
+    - name: Debug
+      condition: event.payload is defined
     ## Define the action we should take should the condition be met  
       action:
-        run_job_template:
-          name: web_working
-          organization: "Default"
+        debug:
+        
 
-
-    - name: Web site is DOWN
-      condition: event.url_check.content != "test"
-    ## Define the action we should take should the condition be met  
-      action:
-        run_job_template:
-          name: fix_web
-          organization: "Default"
