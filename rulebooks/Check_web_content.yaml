@@ -10,7 +10,7 @@
 
   rules:
     - name: Debug
-      condition: event.payload is defined
+      condition: event.url_check.status == "down"
     ## Define the action we should take should the condition be met  
       action:
         debug: "{{ event }}"
