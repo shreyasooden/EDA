@@ -7,6 +7,10 @@
         port: 5000
       filters:
         - ansible.eda.dashes_to_underscores:
+          data_alerts_path: alerts
+          data_host_path: labels.instance
+          data_path_separator: .
+          skip_original_data: true
   rules:
     - name: get prometheus alerts
       condition: event.payload is defined
