@@ -8,7 +8,7 @@
       filters:
         - ansible.eda.dashes_to_underscores:
   rules:
-    - name: update netscaler repository
+    - name: get prometheus alerts
       condition: event.payload is defined
       action:
-        debug:
+        debug: "{{ event }}"
