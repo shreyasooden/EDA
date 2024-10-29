@@ -15,7 +15,7 @@
     - name: get prometheus alerts
       condition: event.payload is defined
       action:
-        debug: "{{ event }}"
+        debug: "{{ event.payload }}"
     - name: SELinux was disabled
 #      condition: event.alerts is defined
       condition: event.payload.alerts.status == "firing" 
