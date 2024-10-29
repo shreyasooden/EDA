@@ -12,7 +12,7 @@
 
   rules:
     - name: Debug Hello event
-      condition: event.alert is defined
+      condition: event.payload is defined
       action:
         debug: "{{ event }}"
     - name: SELinux was disabled
