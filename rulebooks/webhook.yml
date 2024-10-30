@@ -11,8 +11,11 @@
     - name: R1 - Heard "Hello!"
       condition: event.payload.message == "Hello!"
       action:
-        debug:
-          msg: "You said, '{{ event.payload.message }}'. Is it me you're looking for?"
+        run_job_template:
+          name: Apply_baseline
+          organization: Default
+#        debug:
+#          msg: "You said, '{{ event.payload.message }}'. Is it me you're looking for?"
 
     - name: R2 - Didn't hear "Hello!"
       condition: event.payload.message is defined and event.payload.message != "Hello!"
