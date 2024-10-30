@@ -13,12 +13,9 @@
           skip_original_data: true
   rules:
     - name: SELinux was disabled
-      condition: event.alert.status == "firing" 
+      condition: event.payload.alerts.status == "firing" 
       action:
         run_job_template:
           name: Apply_baseline
           organization: Default
-    - name: get prometheus alerts
-      condition: event.payload is defined
-      action:
-        debug: "{{ event.payload }}"
+
