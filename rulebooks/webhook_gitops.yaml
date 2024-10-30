@@ -13,7 +13,7 @@
           skip_original_data: true
   rules:
     - name: SELinux was disabled
-      condition: event.alerts.labels.alertname == "selinux disabled" 
+      condition: event.alerts.payload.status == "firing" 
       action:
         run_job_template:
           name: Apply_baseline
