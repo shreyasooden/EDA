@@ -7,6 +7,7 @@
         urls:
           - http://10.76.107.105:80
         delay: 10
+        return_content: true
 
   rules:
     - name: DEBUG
