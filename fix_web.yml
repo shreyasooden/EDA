@@ -7,10 +7,13 @@
   tasks:
     - debug:
         msg: "Website is down!"
-
+    - name: restart httpd service
+      systemd_service:
+        name: httpd
+        state: started
     - name: Replace website
       copy:
-       # remote_src: yes
+        remote_src: yes
         src: /tmp/index.html
         dest: /var/www/html/
         owner: apache
