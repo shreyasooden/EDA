@@ -16,7 +16,8 @@
       action:
         debug: "{{ event }}"
     - name: SELinux was disabled
-      condition: event.alert.status == "firing"
+      condition: event.payload.alerts[0].status == "firing"  
+      #event.alert.status == "firing"
       action:
         run_job_template:
           name: Apply_baseline
