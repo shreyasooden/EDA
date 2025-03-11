@@ -15,3 +15,12 @@
       condition: event.payload is defined
       action:
         debug: "{{ event }}"
+    - name: SELinux was disabled
+      condition: event.payload.alerts[0].status == "firing"  
+      #event.alert.status == "firing"
+      action:
+        run_job_template:
+          name: Apply_baseline
+          organization: Default
+          #job_args:
+           # limit: "{{ event.meta.hosts }}"
