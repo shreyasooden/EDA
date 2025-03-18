@@ -11,12 +11,12 @@
       systemd_service:
         name: httpd
         state: started
-    - name: Replace website
-      copy:
-        remote_src: yes
-        src: /tmp/index.html
-        dest: /var/www/html/
-        owner: apache
-        group: apache
-        mode: '0644'
+#    - name: Replace website
+#      copy:
+#        remote_src: yes
+#        src: /tmp/index.html
+#        dest: /var/www/html/
+#        owner: apache
+#        group: apache
+#        mode: '0644'
     #  delegate_to: localhost
